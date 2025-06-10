@@ -1,0 +1,20 @@
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
+
+#include "WrongAnimal.hpp"
+
+#define BLACK "\033[30m"
+#define RESET "\033[0m"
+
+class WrongCat : public WrongAnimal
+{
+    public:
+        WrongCat();
+        WrongCat(const WrongCat &other);
+        WrongCat &operator=(const WrongCat &other);
+        ~WrongCat();
+
+        void makeSound() const;
+};
+
+#endif
