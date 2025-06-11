@@ -14,11 +14,11 @@ void	Contact::save_contact(std::string firstname, std::string lastname, std::str
 
 Contact::Contact()
 {
-	std::cout << "Constructor for Contact called" << std::endl;
+	//std::cout << "Constructor for Contact called" << std::endl;
 }
 Contact::~Contact()
 {
-    std::cout << "Destructor for Contact called" << std::endl;
+    //std::cout << "Destructor for Contact called" << std::endl;
 }
 
 std::string Contact::tenchar(std::string str) const

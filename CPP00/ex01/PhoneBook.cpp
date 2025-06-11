@@ -3,17 +3,16 @@
 
 PhoneBook::PhoneBook(int value) : _nextIndexToAdd(value), _storedContacts(value)
 {
-	std::cout << "Constructor for PhoneBook called" << std::endl;
+	//std::cout << "Constructor for PhoneBook called" << std::endl;
 }
 
 PhoneBook::~PhoneBook()
 {
-	std::cout << "Destructor for PhoneBook called" << std::endl;
+	//std::cout << "Destructor for PhoneBook called" << std::endl;
 }
 
 void	PhoneBook::add_info(std::string fn, std::string ln, std::string nn, std::string phone, std::string secret)
 {
-	// this->setnextIndexToAdd();
 	this->_contacts[_nextIndexToAdd % MAX_CONTACTS].save_contact(fn, ln, nn, phone, secret, getnextIndexToAdd());
 	_nextIndexToAdd++;
 	if (_storedContacts < MAX_CONTACTS)
