@@ -5,7 +5,7 @@ AForm::AForm(): _name("DefaultForm"), _signed(false), _sign_grade(150), _execute
 }
 
 AForm::AForm(std::string name, int signGrade, int executeGrade) : _name(name), _signed(false), _sign_grade(signGrade), _execute_grade(executeGrade) {
-    std::cout << BLACK << "Personalised Constructor called for " << _name << RESET << std::endl;
+    std::cout << BLACK << "Personalised Constructor called for " << _name << "'s AForm (base)" << RESET << std::endl;
     if (signGrade > 150)
         throw (AForm::GradeTooLowException());
     else if (signGrade < 1)
@@ -44,13 +44,11 @@ int AForm::getExecuteGrade() const {
     return (this->_execute_grade);
 }
 
-//////////////////////////
 void	AForm::setSigned(bool sign)
 {
 	this->_signed = sign;
 	return ;
 }
-//////////////////////////
 
 void AForm::beSigned(Bureaucrat &src) {
     if (src.getGrade() <= this->getSignGrade() && this->getSigned() == 0)
