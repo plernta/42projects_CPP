@@ -29,6 +29,7 @@ clean:
 
 fclean:	clean
 	@rm -rf $(NAME)
+	@rm -rf *_shrubbery
 
 re: fclean all
 
